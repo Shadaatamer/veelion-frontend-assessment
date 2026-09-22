@@ -1,0 +1,259 @@
+:root {
+  --bg: #f8f8f6;
+  --surface: #ffffff;
+  --text: #1e2328;
+  --muted: #5c6670;
+  --border: #d3d8de;
+  --primary: #145e63;
+  --primary-soft: #dcefee;
+  --danger: #9f2241;
+  --chip: #f1f4f6;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top right, #eef4e7, var(--bg) 55%);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  width: min(980px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.button {
+  border: 1px solid var(--border);
+  background: var(--chip);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: #bac1c9;
+}
+
+.button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  background: var(--chip);
+}
+
+.input {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  padding: 1rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.activity-feed {
+  display: grid;
+  gap: 1rem;
+}
+
+.activity-search {
+  max-width: 420px;
+}
+
+.activity-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.activity-item {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.activity-action {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.activity-info {
+  margin: 0;
+  color: var(--muted);
+}
+
+.activity-time {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.activity-state {
+  padding: 1rem;
+}
+
+.activity-state p {
+  margin-top: 0;
+}
+
+.error-text {
+  color: var(--danger);
+}
+
+@media (max-width: 700px) {
+  .activity-item {
+    flex-direction: column;
+  }
+
+  .activity-time {
+    white-space: normal;
+  }
+}
+.status-summary {
+  padding: 1rem;
+}
+
+.status-summary h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.status-row:first-of-type {
+  border-top: 0;
+}
+
+.report-state {
+  padding: 1rem;
+}
+
+.report-state p {
+  margin-top: 0;
+}
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.home-card {
+  display: block;
+  padding: 1.25rem;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-2px);
+  border-color: #b5c0c8;
+  box-shadow: 0 8px 20px rgba(24, 39, 51, 0.06);
+}
+
+.home-card-number {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.home-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.home-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.app-nav a {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.app-nav a:hover {
+  border-color: var(--primary);
+}
